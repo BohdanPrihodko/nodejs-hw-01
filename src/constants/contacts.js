@@ -1,2 +1,3 @@
-const path = require('path');
-export const PATH_DB = path.join(__dirname, 'db', 'db.json');
+import { join } from 'node:path';
+
+export const PATH_DB = join('src', 'db', 'db.json');

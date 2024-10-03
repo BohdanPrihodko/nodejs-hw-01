@@ -1,8 +1,8 @@
-import { promises as fs } from 'fs';
+import fs from 'node:fs/promises';
 import { PATH_DB } from '../constants/contacts.js';
 
 export const writeContacts = async (updatedContacts) => {
-    try {
+  try {
     const formattedData = JSON.stringify(updatedContacts, null, 2);
     await fs.writeFile(PATH_DB, formattedData, 'utf8');
     console.log('Contacts have been written successfully.');
